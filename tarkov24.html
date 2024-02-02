@@ -174,4 +174,42 @@
         </div>
         <div class="feature">
             <div class="feature-content">
-                <h2>Join a Thriving Community</h2
+                <h2>Join a Thriving Community</h2>
+                <p>Connect with thousands of other players in our vibrant gaming community. Share tips and strategies, form alliances, and participate in community events.</p>
+                <a href="https://discord.gg/8dAtjFe9Su" target="_blank" class="cta-button">Join Community</a>
+            </div>
+            <img src="https://i.imgur.com/NbJHs4P.gif" alt="Community Image">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; SPT-AKI,SIT,404 Studios,Tarkov24 All rights reserved.</p>
+    </footer>
+
+    <script>
+        function displayServerInfo() {
+            var serverInfoDiv = document.getElementById("server-info");
+            var modalOverlay = document.getElementById("modal-overlay");
+            modalOverlay.style.display = "block";
+            serverInfoDiv.style.display = "block";
+        }
+
+        function hideServerInfo() {
+            var serverInfoDiv = document.getElementById("server-info");
+            var modalOverlay = document.getElementById("modal-overlay");
+            serverInfoDiv.style.display = "none";
+            modalOverlay.style.display = "none";
+        }
+
+        function copyTextToClipboard(text) {
+            var dummy = document.createElement("textarea");
+            document.body.appendChild(dummy);
+            dummy.value = text;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+            alert("IP address copied: " + text);
+        }
+    </script>
+</body>
+</html>
