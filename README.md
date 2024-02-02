@@ -1,14 +1,14 @@
-<div align="center">
+<p align="center">
   <img src="https://i.imgur.com/NOmAwge.png" alt="Tarkov24 Logo" width="200"/>
-</div>
+</p>
 
-<h1 align="center">Welcome to Tarkov24</h1>
+<h1 align="center"><b>Welcome to Tarkov24</b></h1>
 
-<p align="center">Tarkov24 is a multiplayer private server for Escape from Tarkov, providing an alternative gaming experience in the intense world of Tarkov.</p>
+<p align="center" style="font-family: 'Arial', sans-serif; font-size: 16px;">Tarkov24 is a multiplayer private server for Escape from Tarkov, providing an alternative gaming experience in the intense world of Tarkov.</p>
 
 ## Overview
 
-<p align="center">Tarkov24 offers a community-driven platform where players can engage in intense PVE firefights, connect with other players, and access server information.</p>
+<p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">Tarkov24 offers a community-driven platform where players can engage in intense PVE firefights, connect with other players, and access server information.</p>
 
 ## Features
 
@@ -20,7 +20,7 @@
 
 ## Getting Started
 
-<p align="center">To start playing on Tarkov24:</p>
+<p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">To start playing on Tarkov24:</p>
 
 <ol align="center">
   <li><strong>Download</strong>: Visit the <a href="https://github.com/robwhitewick/tarkovMultiplayerFiles/releases/tag/latest">latest release</a> to download the game files.</li>
@@ -30,13 +30,12 @@
 
 ## Server Information
 
-<p align="center">Access our game servers by clicking on the "Servers" button on the website header.</p>
+<p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">Access our game servers by clicking on the "Servers" button on the website header.</p>
 
 ## Contributions
 
-<p align="center">We welcome contributions to enhance Tarkov24. If you find any issues or have suggestions, feel free to open an issue or submit a pull request.</p>
+<p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">We welcome contributions to enhance Tarkov24. If you find any issues or have suggestions, feel free to open an issue or submit a pull request.</p>
 
 ## License
 
-<p align="center">This project is licensed under the <a href="LICENSE">MIT License</a>.</p>
-
+<p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">This project is licensed under the <a href="LICENSE">MIT License</a>.</p>
