@@ -30,7 +30,7 @@
 
 ## Server Information
 
-<p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">Access our game servers by clicking on the "Servers" button on the website header.</p>
+<p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">Access our game servers by visiting our <a href="https://ftzys.github.io/Tarkov24/">servers website</a>.</p>
 
 ## Contributions
 
