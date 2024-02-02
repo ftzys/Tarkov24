@@ -165,6 +165,10 @@
             <a href="https://discord.com/channels/1193823641025138800/1195488587395895427/1195490014344249465" target="_blank" class="button">Whitelist</a>
             <button class="button" onclick="displayServerInfo()">Servers</button>
         </div>
+        <div class="ping-info" id="ping-info">
+            <img class="flag-icon" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/2560px-Flag_of_the_United_States.svg.png" alt="American Flag">
+            <span id="ping-text">Ping: - ms</span>
+        </div>
     </header>
 
     <div class="modal-overlay" id="modal-overlay" onclick="hideServerInfo()"></div>
@@ -215,6 +219,26 @@
             document.body.removeChild(dummy);
             alert("IP address copied: " + text);
         }
+
+        function getPingAndUpdate() {
+            var img = new Image();
+            var startTime;
+            img.onload = function () {
+                var endTime = new Date().getTime();
+                var ping = endTime - startTime;
+                document.getElementById("ping-text").innerText = "Ping: " + ping + "ms";
+                document.getElementById("ping-text").style.color = "#4CAF50";
+            };
+            img.onerror = function () {
+                document.getElementById("ping-text").innerText = "Ping: Error";
+                document.getElementById("ping-text").style.color = "red";
+            };
+            startTime = new Date().getTime();
+            img.src = "51.222.245.40"; // Adjust the URL accordingly
+        }
+
+        // Call getPingAndUpdate function repeatedly with a 5-second interval
+        setInterval(getPingAndUpdate, 5000);
     </script>
 </body>
 </html>
