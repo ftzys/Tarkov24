@@ -35,3 +35,20 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact
 
 Thank you for being a part of the Tarkov24 community!
+
+# Tarkov24
+
+![Tarkov24 Logo](https://placekitten.com/200/200) <!-- Replace this with your actual logo -->
+
+Welcome to Tarkov24, your ultimate guide to surviving in the harsh world of Escape from Tarkov.
+
+## Features
+
+- Comprehensive weapon database
+- Interactive map with loot locations
+- Quest guides
+- Gear recommendations
+
+## Installation
+
+1. Clone this repository:
