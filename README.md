@@ -1,15 +1,6 @@
-# Tarkov24
-
 ![Tarkov24 Logo](https://i.imgur.com/NOmAwge.png100/100) <!-- Replace this with your actual logo -->
 
-## Features
-
-- Comprehensive weapon database
-- Interactive map with loot locations
-- Quest guides
-- Gear recommendations
-
-Welcome to Tarkov24 - a multiplayer gaming community for Escape from Tarkov enthusiasts!
+Welcome to Tarkov24 - a multiplayer private server for escape from tarkov because live is shit lol
 
 ## Overview
 
@@ -40,11 +31,3 @@ We welcome contributions to enhance Tarkov24. If you find any issues or have sug
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
-## Contact
-
-Thank you for being a part of the Tarkov24 community!
-
-## Installation
-
-1. Clone this repository:
