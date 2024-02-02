@@ -5,6 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarkov24</title>
     <style>
+        /* Your existing CSS styles here */
+
+        /* Additional styles for ping info */
+        .ping-info {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+            color: #4CAF50; /* Green color */
+            font-size: 14px;
+        }
+
+        .flag-icon {
+            width: 20px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Other header content -->
+        <div class="ping-info">
+            <img class="flag-icon" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/2560px-Flag_of_the_United_States.svg.png" alt="American Flag">
+            <span id="ping-text">Ping: - ms</span>
+        </div>
+    </header>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarkov24</title>
+    <style>
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -209,6 +244,28 @@
             document.body.removeChild(dummy);
             alert("IP address copied: " + text);
         }
+    </script>
+</body>
+</html>
+
+    <script>
+        function getPingAndUpdate() {
+            var img = new Image();
+            var startTime;
+            img.onload = function () {
+                var endTime = new Date().getTime();
+                var ping = endTime - startTime;
+                document.getElementById("ping-text").innerText = "Ping: " + ping + "ms";
+            };
+            img.onerror = function () {
+                document.getElementById("ping-text").innerText = "Ping: Error";
+            };
+            startTime = new Date().getTime();
+            img.src = "http://51.222.245.40"; // Adjust the URL accordingly
+        }
+
+        // Call getPingAndUpdate function repeatedly with a 5-second interval
+        setInterval(getPingAndUpdate, 5000);
     </script>
 </body>
 </html>
