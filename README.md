@@ -1,6 +1,6 @@
 # Tarkov24
 
-![Tarkov24 Logo](https://i.imgur.com/NOmAwge.png100x100) <!-- Replace this with your actual logo -->
+![Tarkov24 Logo](https://i.imgur.com/NOmAwge.png100/100) <!-- Replace this with your actual logo -->
 
 ## Features
 
