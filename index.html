@@ -21,12 +21,12 @@
             justify-content: center; /* Center horizontally */
             position: relative; /* Relative positioning for absolute children */
         }
-.button-container {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    margin-top: 10px; /* Adjust as needed */
-}
+        .button-container {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            margin-top: 10px; /* Adjust as needed */
+        }
 
         .button {
             background-color: transparent;
@@ -37,6 +37,11 @@
             cursor: pointer;
             margin-right: 5px;
             padding: 10px 20px;
+            transition: transform 0.3s ease, background-color 0.3s;
+        }
+        .button:hover {
+            transform: scale(1.1); /* Scale the button slightly on hover */
+            background-color: rgba(255, 255, 255, 0.1); /* Change background color on hover */
         }
         .container {
             max-width: 1200px;
