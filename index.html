@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarkov24</title>
     <style>
@@ -11,23 +11,23 @@
             padding: 0;
             background-color: #1a1a1a;
             color: #fff;
+            text-align: center; /* Center align content */
         }
         header {
             background-color: #121212;
             padding: 5px 0;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            position: relative; /* Relative positioning for absolute children */
         }
-        .logo {
-            width: 150px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-        .button-container {
-            display: flex;
-            margin-top: auto;
-        }
+.button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 10px; /* Adjust as needed */
+}
+
         .button {
             background-color: transparent;
             border: none;
@@ -38,13 +38,35 @@
             margin-right: 5px;
             padding: 10px 20px;
         }
-        .button:hover {
-            background-color: #45a049;
-        }
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            text-align: center; /* Center align content */
+            position: relative; /* Relative positioning for absolute children */
+        }
+        .ping-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .ping-info img {
+            width: 20px;
+            height: auto;
+            margin-right: 5px;
+        }
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .logo-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
         .feature {
             display: flex;
@@ -92,153 +114,52 @@
             padding: 10px 0;
             text-align: center;
             color: #aaa;
-        }
-        .center-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .flag {
-            width: 20px;
-            margin-right: 5px;
-            vertical-align: middle;
-        }
-        .modal-overlay {
             position: fixed;
-            top: 0;
+            bottom: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 9998;
-            display: none;
-        }
-        #server-info {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            z-index: 9999;
-            padding: 40px;
-            background-color: rgba(0, 0, 0, 0.8);
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            display: none;
-            color: white;
-        }
-        .ip-address {
-            margin-top: 20px;
-            font-size: 24px;
-            color: #4CAF50;
-            cursor: pointer;
-        }
-        .flag-icon {
-            width: 30px;
-            margin-right: 5px;
-            vertical-align: middle;
-        }
-        /* Additional styles for ping info */
-        .ping-info {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            display: flex;
-            align-items: center;
-            color: #4CAF50; /* Green color */
-            font-size: 14px;
-        }
-
-        .flag-icon {
-            width: 20px;
-            margin-right: 5px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <!-- Other header content -->
-        <img src="https://i.imgur.com/NOmAwge.png" class="logo">
-        <div class="button-container">
-            <a href="https://github.com/robwhitewick/tarkovMultiplayerFiles/releases/tag/latest" target="_blank" class="button">Download</a>
-            <a href="https://discord.com/channels/1193823641025138800/shop" target="_blank" class="button">Store</a>
-            <a href="https://discord.com/channels/1193823641025138800/1195488587395895427/1195490014344249465" target="_blank" class="button">Whitelist</a>
-            <button class="button" onclick="displayServerInfo()">Servers</button>
-        </div>
-        <div class="ping-info" id="ping-info">
-            <img class="flag-icon" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/2560px-Flag_of_the_United_States.svg.png" alt="American Flag">
-            <span id="ping-text">Ping: - ms</span>
-        </div>
-    </header>
 
-    <div class="modal-overlay" id="modal-overlay" onclick="hideServerInfo()"></div>
+<header>
+    <div class="button-container">
+        <a href="https://github.com/robwhitewick/tarkovMultiplayerFiles/releases/tag/latest" target="_blank" class="button">Download</a>
+        <a href="https://discord.com/channels/1193823641025138800/shop" target="_blank" class="button">Store</a>
+        <a href="https://discord.com/channels/1193823641025138800/1195488587395895427/1195490014344249465" target="_blank" class="button">Whitelist</a>
+    </div>
+</header>
 
-    <div class="container">
-        <div class="feature">
-            <img src="https://i.imgur.com/KPjXaQt.gif" alt="Game Feature Image">
-            <div class="feature-content">
-                <h2>Experience Intense PVE Firefights</h2>
-                <p>Join the action-packed world of Escape from Tarkov24 and engage in intense firefights against AI-controlled PMC and Scavs. Explore a variety of maps and take on challenging missions.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <div class="feature-content">
-                <h2>Join a Thriving Community</h2>
-                <p>Connect with thousands of other players in our vibrant gaming community. Share tips and strategies, form alliances, and participate in community events.</p>
-                <a href="https://discord.gg/8dAtjFe9Su" target="_blank" class="cta-button">Join Community</a>
-            </div>
-            <img src="https://i.imgur.com/NbJHs4P.gif" alt="Community Image">
+<div class="container">
+    <div class="ping-info">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg/255px-Flag_of_the_United_States_%28DoS_ECA_Color_Standard%29.svg.png" alt="American Flag"> 
+        <span class="responseTimeUS">27ms</span>
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/255px-Flag_of_Germany.svg.png" alt="German Flag"> 
+        <span class="responseTimeGermany">32ms</span>
+    </div>
+    <div class="logo-container">
+        <img src="./Tarkov24_files/NOmAwge.png" class="logo">
+    </div>
+    <div class="feature">
+        <img src="./Tarkov24_files/KPjXaQt.gif" alt="Game Feature Image">
+        <div class="feature-content">
+            <h2>Experience Intense PVE Firefights</h2>
+            <p>Join the action-packed world of Escape from Tarkov24 and engage in intense firefights against AI-controlled PMC and Scavs. Explore a variety of maps and take on challenging missions.</p>
         </div>
     </div>
+    <div class="feature">
+        <div class="feature-content">
+            <h2>Join a Thriving Community</h2>
+            <p>Connect with thousands of other players in our vibrant gaming community. Share tips and strategies, form alliances, and participate in community events.</p>
+            <a href="https://discord.gg/8dAtjFe9Su" target="_blank" class="cta-button">Join Community</a>
+        </div>
+        <img src="./Tarkov24_files/NbJHs4P.gif" alt="Community Image">
+    </div>
+</div>
 
-    <footer>
-        <p>&copy; SPT-AKI,SIT,404 Studios,Tarkov24 All rights reserved.</p>
-    </footer>
-
-    <script>
-        function displayServerInfo() {
-            var serverInfoDiv = document.getElementById("server-info");
-            var modalOverlay = document.getElementById("modal-overlay");
-            modalOverlay.style.display = "block";
-            serverInfoDiv.style.display = "block";
-        }
-
-        function hideServerInfo() {
-            var serverInfoDiv = document.getElementById("server-info");
-            var modalOverlay = document.getElementById("modal-overlay");
-            serverInfoDiv.style.display = "none";
-            modalOverlay.style.display = "none";
-        }
-
-        function copyTextToClipboard(text) {
-            var dummy = document.createElement("textarea");
-            document.body.appendChild(dummy);
-            dummy.value = text;
-            dummy.select();
-            document.execCommand("copy");
-            document.body.removeChild(dummy);
-            alert("IP address copied: " + text);
-        }
-
-        function getPingAndUpdate() {
-            var img = new Image();
-            var startTime;
-            img.onload = function () {
-                var endTime = new Date().getTime();
-                var ping = endTime - startTime;
-                document.getElementById("ping-text").innerText = "Ping: " + ping + "ms";
-                document.getElementById("ping-text").style.color = "#4CAF50";
-            };
-            img.onerror = function () {
-                document.getElementById("ping-text").innerText = "Ping: Error";
-                document.getElementById("ping-text").style.color = "red";
-            };
-            startTime = new Date().getTime();
-            img.src = "51.222.245.40"; // Adjust the URL accordingly
-        }
-
-        // Call getPingAndUpdate function repeatedly with a 5-second interval
-        setInterval(getPingAndUpdate, 5000);
-    </script>
+<footer>
+    <p>© SPT-AKI,SIT,404 Studios,Tarkov24 All rights reserved.</p>
+</footer>
 </body>
 </html>
