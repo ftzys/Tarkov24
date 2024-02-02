@@ -34,6 +34,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-If you have any questions or inquiries, you can reach out to us at [info@tarkov24.com](mailto:info@tarkov24.com).
-
 Thank you for being a part of the Tarkov24 community!
