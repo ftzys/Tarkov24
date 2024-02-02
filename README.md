@@ -6,7 +6,7 @@ Tarkov24 is a multiplayer private server for Escape from Tarkov, providing an al
 
 ## Overview
 
-Tarkov24 offers a community-driven platform where players can engage in intense PVE firefights, connect with other players, and access server information.
+Tarkov24 offers a community-driven platform where players can engage in intense PVE firefights, connect with other players and avoid Eft's live cheater problem
 
 ## Features
 
