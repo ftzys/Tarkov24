@@ -72,6 +72,18 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            animation: logoPulse 5s infinite alternate; /* Apply animation */
+        }
+        @keyframes logoPulse {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
         }
         .feature {
             display: flex;
