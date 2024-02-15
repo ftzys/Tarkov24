@@ -1,177 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarkov24</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1a1a1a;
-            color: #fff;
-            text-align: center; /* Center align content */
-        }
-        header {
-            background-color: #121212;
-            padding: 5px 0;
-            display: flex;
-            align-items: center; /* Center vertically */
-            justify-content: center; /* Center horizontally */
-            position: relative; /* Relative positioning for absolute children */
-        }
-        .button-container {
-            display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            margin-top: 10px; /* Adjust as needed */
-        }
-
-        .button {
-            background-color: transparent;
-            border: none;
-            color: #fff;
-            font-size: 16px;
-            text-transform: uppercase;
-            cursor: pointer;
-            margin-right: 5px;
-            padding: 10px 20px;
-            transition: transform 0.3s ease, background-color 0.3s;
-        }
-        .button:hover {
-            transform: scale(1.1); /* Scale the button slightly on hover */
-            background-color: rgba(255, 255, 255, 0.1); /* Change background color on hover */
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center; /* Center align content */
-            position: relative; /* Relative positioning for absolute children */
-        }
-        .ping-info {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            margin-bottom: 10px;
-        }
-        .ping-info img {
-            width: 20px;
-            height: auto;
-            margin-right: 5px;
-        }
-        .logo {
-            width: 300px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-        .logo-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation: logoPulse 5s infinite alternate; /* Apply animation */
-        }
-        @keyframes logoPulse {
-            0% {
-                transform: translate(-50%, -50%) scale(1);
-            }
-            50% {
-                transform: translate(-50%, -50%) scale(1.1);
-            }
-            100% {
-                transform: translate(-50%, -50%) scale(1);
-            }
-        }
-        .feature {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 40px;
-        }
-        .feature img {
-            max-width: 50%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .feature-content {
-            max-width: 45%;
-            text-align: left;
-        }
-        .feature-content h2 {
-            font-size: 24px;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-        .feature-content p {
-            font-size: 16px;
-            line-height: 1.5;
-        }
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 18px;
-            text-transform: uppercase;
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            text-decoration: none;
-        }
-        .cta-button:hover {
-            background-color: #45a049;
-        }
-        footer {
-            background-color: #121212;
-            padding: 10px 0;
-            text-align: center;
-            color: #aaa;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tetris</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        margin: 0;
+    }
+    #tetrisContainer {
+        position: relative;
+        background-image: url('https://cdn.discordapp.com/attachments/618971960092786699/1207644272195543100/image.png?ex=65e0655f&is=65cdf05f&hm=b64c4cf52ca18f01fc98c42e8d88c4ff5478d6afe7f2aafdaf197f265d47a72d&');
+        background-size: 100% auto; /* Stretch horizontally, maintain aspect ratio */
+        background-repeat: yes-repeat;
+        width: 240px;
+        height: 400px;
+        border: 6px solid #000; /* Add border style, width, and color */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .grid {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+    .grid-row {
+        display: flex;
+        width: 100%;
+        height: calc(100% / 20); /* 20 rows */
+    }
+    .grid-cell {
+        flex: 1;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    #clock {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    #score {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    #startButton {
+        background-image: url('https://cdn.discordapp.com/attachments/618971960092786699/1207634743102013470/360_F_534413913_QF8E2ELN3S9c8L16w1roKxhi87bQA89O-removebg-preview.png?ex=65e05c7f&is=65cde77f&hm=1a498f56d0c8cf8141af759e0714f68c265a1a2b6c41f8ab397426abfcd32c19&');
+        background-size: contain;
+        width: 160px;
+        height: 70px;
+        border: none;
+        cursor: pointer;
+        outline: none;
+    }
+</style>
 </head>
 <body>
-
-<header>
-    <div class="button-container">
-        <a href="https://github.com/robwhitewick/tarkovMultiplayerFiles/releases/tag/latest" target="_blank" class="button">Download</a>
-        <a href="https://discord.com/channels/1193823641025138800/shop" target="_blank" class="button">Store</a>
-        <a href="https://discord.com/channels/1193823641025138800/1195488587395895427/1195490014344249465" target="_blank" class="button">Whitelist</a>
-    </div>
-</header>
-
-<div class="container">
-    
-    <div class="logo-container">
-        <img src="https://i.imgur.com/RjqB8CA.png" class="logo">
-    </div>
-    <div class="feature">
-        <img src="https://i.imgur.com/KPjXaQt.gif" alt="Game Feature Image">
-        <div class="feature-content">
-            <h2>Experience Intense PVE Firefights</h2>
-            <p>Join the action-packed world of Escape from Tarkov24 and engage in intense firefights against AI-controlled PMC and Scavs. Explore a variety of maps and take on challenging missions.</p>
+    <button id="startButton"></button>
+    <div id="clock"></div>
+    <div id="score">Score: 0</div>
+    <div id="tetrisContainer">
+        <canvas id="tetrisCanvas" width="240" height="400"></canvas>
+        <div class="grid">
+            <!-- Grid rows -->
+            <div class="grid-row"></div>
+            <div class="grid-row"></div>
+            <div class="grid-row"></div>
+            <div class="grid-row"></div>
+            <div class="grid-row"></div>
+            <div class="grid-row"></div>
+            <div class="grid-row"></div>
+            <div class="grid-row"></div>
+            <div class="grid-row"></div>
+            <div class="grid-row"></div>
+            <div class="grid-row"></div>
+            <div class="grid-row"></div>
+            <div class="grid-row"></div>
+            <div class="grid-row"></div>
+            <div class="grid-row"></div>
+            <div class="grid-row"></div>
+            <div class="grid-row"></div>
+            <div class="grid-row"></div>
+            <div class="grid-row"></div>
+            <div class="grid-row"></div>
         </div>
     </div>
-    <div class="feature">
-        <div class="feature-content">
-            <h2>Join a Thriving Community</h2>
-            <p>Connect with thousands of other players in our vibrant gaming community. Share tips and strategies, form alliances, and participate in community events.</p>
-            <a href="https://discord.gg/8dAtjFe9Su" target="_blank" class="cta-button">Join Community</a>
-        </div>
-        <img src="https://i.imgur.com/NbJHs4P.gif" alt="Community Image">
-    </div>
-</div>
+    <audio id="music" loop>
+        <source src="https://dl.vgmdownloads.com/soundtracks/tetris-99-2019-switch-gamerip/dgyrglfhci/02.%20Battle%20Theme%20%5BTetris%20Type%20A%20GB%20Remix%5D%20%5BDefault%20Theme%5D.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="gameOverSound">
+        <source src="https://dl.vgmdownloads.com/soundtracks/tetris-99-2019-switch-gamerip/zbixthmupx/156.%20Game%20Start%20SFX%20%5BPokemon%20Legends%20Arceus%5D.mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        const canvas = document.getElementById('tetrisCanvas');
+        const context = canvas.getContext('2d');
+        const scale = 20;
+        const rows = canvas.height / scale;
+        const columns = canvas.width / scale;
 
-<footer>
-    <p>© SPT-AKI,SIT,404 Studios,Tarkov24 All rights reserved.</p>
-</footer>
+        function drawSquare(x, y, color, shadeColor, highlightColor) {
+            context.fillStyle = color;
+            context.fillRect(x * scale, y * scale, scale, scale);
+
+            // Add shading
+            context.fillStyle = shadeColor;
+            context.fillRect(x * scale, y * scale, scale, scale);
+
+            // Add highlights
+            context.fillStyle = highlightColor;
+            context.fillRect(x * scale, y * scale, scale * 0.5, scale * 0.5);
+        }
+
+        const tetrominoes = [
+            { shape: [[1, 1, 1, 1]], color: '#55FFFF', shade: '#22CCCC', highlight: '#AAFFFF' },  // I
+            { shape: [[1, 1, 1], [0, 1, 0]], color: '#FF55FF', shade: '#CC22CC', highlight: '#FFAAFF' },  // T
+            { shape: [[1, 1, 0], [0, 1, 1]], color: '#FF5555', shade: '#CC2222', highlight: '#FFAAAA' },  // Z
+            { shape: [[0, 1, 1], [1, 1, 0]], color: '#55FF55', shade: '#22CC22', highlight: '#AAFFAA' },  // S
+            { shape: [[1, 1], [1, 1]], color: '#FFFF55', shade: '#CCCC22', highlight: '#FFFFAA' },  // O
+            { shape: [[1, 1, 1], [0, 0, 1]], color: '#FFAA55', shade: '#CC6611', highlight: '#FFDDAA' },  // L
+            { shape: [[1, 1, 1], [1, 0, 0]], color: '#5555FF', shade: '#2222CC', highlight: '#AAAAFF' }  // J
+        ];
+
+        function randomTetromino() {
+            return tetrominoes[Math.floor(Math.random() * tetrominoes.length)];
+        }
+
+        let currentTetromino;
+        let currentX;
+        let currentY;
+        let score;
+        let clockInterval;
+        let gameOver = false;
+
+        function startGame() {
+            document.getElementById('startButton').style.display = 'none';
+            currentTetromino = randomTetromino();
+            currentX = 4;
+            currentY = 0;
+            score = 0;
+            gameOver = false;
+            grid.forEach(row => row.fill(0));
+            clearInterval(clockInterval);
+            clockInterval = setInterval(updateClock, 1000);
+            update();
+            document.getElementById('music').play(); // Start playing the music
+        }
+
+        function gameOverCheck() {
+            const gameOver = grid[0].some(cell => cell !== 0); // Check if any cell in the top row is occupied
+            if (gameOver) {
+                document.getElementById('gameOverSound').play(); // Play the game over sound
+            }
+            return gameOver;
+        }
+
+        function draw() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            drawTetromino(currentX, currentY);
+            drawGrid();
+            drawScore();
+        }
+
+        function drawTetromino(x, y) {
+            currentTetromino.shape.forEach((row, i) => {
+                row.forEach((value, j) => {
+                    if (value) {
+                        drawSquare(x + j, y + i, currentTetromino.color, currentTetromino.shade, currentTetromino.highlight);
+                    }
+                });
+            });
+        }
+
+        function drawGrid() {
+            for (let i = 0; i < rows; i++) {
+                for (let j = 0; j < columns; j++) {
+                    if (grid[i][j]) {
+                        drawSquare(j, i, grid[i][j], 'rgba(0,0,0,0.2)', 'rgba(255,255,255,0.2)');
+                    }
+                }
+            }
+        }
+
+        let dropCounter = 0;
+        let dropInterval = 300; // 0.3 second (faster fall rate)
+        let lastTime = 0;
+
+        function update(time = 0) {
+            if (!gameOver) {
+                const deltaTime = time - lastTime;
+                lastTime = time;
+
+                dropCounter += deltaTime;
+                if (dropCounter > dropInterval) {
+                    drop();
+                }
+
+                draw();
+                requestAnimationFrame(update);
+            }
+        }
+
+        function drop() {
+            currentY++;
+            if (collide()) {
+                currentY--;
+                merge();
+                currentTetromino = randomTetromino();
+                currentX = 4;
+                currentY = 0;
+                if (gameOverCheck()) {
+                    gameOver = true;
+                    clearInterval(clockInterval);
+                    document.getElementById('startButton').style.display = 'block';
+                    document.getElementById('music').pause(); // Pause the music
+                }
+            }
+            dropCounter = 0;
+        }
+
+        function collide() {
+            for (let i = 0; i < currentTetromino.shape.length; i++) {
+                for (let j = 0; j < currentTetromino.shape[i].length; j++) {
+                    if (currentTetromino.shape[i][j] && (grid[currentY + i] && grid[currentY + i][currentX + j]) !== 0) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        function gameOverCheck() {
+            return grid[0].some(cell => cell !== 0); // Check if any cell in the top row is occupied
+        }
+
+        const grid = [];
+        for (let i = 0; i < rows; i++) {
+            grid.push(new Array(columns).fill(0));
+        }
+
+        function merge() {
+            currentTetromino.shape.forEach((row, i) => {
+                row.forEach((value, j) => {
+                    if (value) {
+                        grid[currentY + i][currentX + j] = currentTetromino.color;
+                    }
+                });
+            });
+            const linesCleared = checkForLines();
+            if (linesCleared > 0) {
+                updateScore(linesCleared);
+            }
+        }
+
+        function checkForLines() {
+            let linesCleared = 0;
+            for (let i = rows - 1; i >= 0; i--) {
+                if (grid[i].every(cell => cell !== 0)) {
+                    grid.splice(i, 1);
+                    grid.unshift(new Array(columns).fill(0));
+                    linesCleared++;
+                }
+            }
+            return linesCleared;
+        }
+
+        function updateScore(linesCleared) {
+            score += linesCleared * 100; // Add 100 points per cleared line
+        }
+
+        function drawScore() {
+            const scoreElement = document.getElementById('score');
+            scoreElement.textContent = `Score: ${score}`;
+        }
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'a') { // A key (left)
+                if (!gameOver) {
+                    currentX--; // Reduce step size for left direction
+                    if (collide()) {
+                        currentX++;
+                    }
+                }
+            } else if (event.key === 'd') { // D key (right)
+                if (!gameOver) {
+                    currentX++; // Reduce step size for right direction
+                    if (collide()) {
+                        currentX--;
+                    }
+                }
+            } else if (event.key === ' ') { // Spacebar (rotate)
+                if (!gameOver) {
+                    rotate();
+                }
+            } else if (event.key === 's') { // S key (move down immediately)
+                if (!gameOver) {
+                    dropToBottom();
+                    drop(); // After dropping to the bottom, finalize the drop
+                }
+            }
+        });
+
+        function rotate() {
+            const rotatedTetromino = [];
+            for (let i = 0; i < currentTetromino.shape[0].length; i++) {
+                let newRow = [];
+                for (let j = currentTetromino.shape.length - 1; j >= 0; j--) {
+                    newRow.push(currentTetromino.shape[j][i]);
+                }
+                rotatedTetromino.push(newRow);
+            }
+            currentTetromino.shape = rotatedTetromino;
+            if (collide()) {
+                rotate();
+            }
+        }
+
+        const clockElement = document.getElementById('clock');
+
+        function updateClock() {
+            const date = new Date();
+            const minutes = String(date.getMinutes()).padStart(2, '0');
+            const seconds = String(date.getSeconds()).padStart(2, '0');
+            clockElement.textContent = `Time: ${minutes}:${seconds}`;
+        }
+
+        const startButton = document.getElementById('startButton');
+        startButton.addEventListener('click', startGame);
+
+        function dropToBottom() {
+            while (!collide()) {
+                currentY++;
+            }
+            currentY--; // Adjust one step up to revert the last iteration
+        }
+    </script>
 </body>
 </html>
