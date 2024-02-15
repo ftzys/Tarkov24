@@ -2,7 +2,7 @@
   <img src="https://i.imgur.com/ZqEZNBD.png" alt="Tarkov24 Logo" width="200"/>
 </p>
 
-<h1 align="center"><b>Welcome/b></h1>
+<h1 align="center"><b>Welcome</b></h1>
 
 <p align="center" style="font-family: 'Arial', sans-serif; font-size: 16px;">Tarkov24 is a multiplayer private server for Escape from Tarkov, providing an alternative gaming experience in the intense world of Tarkov.</p>
 
