@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="[https://i.imgur.com/NOmAwge.png](https://i.imgur.com/ZqEZNBD.png)" alt="Tarkov24 Logo" width="200"/>
+  <img src="https://i.imgur.com/ZqEZNBD.png" alt="Tarkov24 Logo" width="200"/>
 </p>
 
 <h1 align="center"><b>Welcome to Tarkov24</b></h1>
