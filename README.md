@@ -29,7 +29,7 @@
 ## Server Locations
 
 <p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">NewYork   ,   Frankfurt   ,   Singapore   ,   Russia.</p>
-
+[![Watch the video]([https://i.stack.imgur.com/Vp2cE.png](https://i.ytimg.com/vi/bu-MzeTMuXY/maxresdefault.jpg))]([https://youtu.be/vt5fpE0bzSY](https://cdn.discordapp.com/attachments/1194743533358284963/1204203672939266108/Tutorial_for_SIT_tarkov..mp4?ex=65dd1b90&is=65caa690&hm=9901f7f2eb1b42f4dccca48546a3fcfc1a6eeed9e5ac1111c54ee98deb456997&))
 ## Disclaimer
 
 <p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;"> This is a Fan page for the 404Studios Tarkov private server , Tarkov24 does not own or host any files associated with 404studios
