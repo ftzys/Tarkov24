@@ -15,7 +15,7 @@
 <ul align="center">
   <li><strong>Intense PVE Firefights</strong>: Experience thrilling battles against AI-controlled PMC and Scavs.</li>
   <li><strong>Vibrant Community</strong>: Connect with thousands of players, share tips, and participate in community events.</li>
-  <li><strong>Server Information</strong>: Access our game servers' IP addresses for seamless gameplay.</li>
+  <li><strong>Servers</strong>: 3 seperate servers in 3 different regions NA , EU , AS</li>
 </ul>
 
 ## Getting Started
@@ -23,9 +23,9 @@
 <p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">To start playing on Tarkov24:</p>
 
 <ol align="center">
-  <li><strong>Download</strong>: Visit the <a href="https://github.com/robwhitewick/tarkovMultiplayerFiles/releases/tag/latest">latest release</a> to download the Private server client.</li>
-  <li><strong>Join Community</strong>: Join 404's Discord server <a href="https://discord.gg/8dAtjFe9Su">Discord community</a>.</li>
-  <li><strong>Whitelist</strong>: Whitelist your account <a href="https://discord.com/channels/1193823641025138800/1195488587395895427/1195490014344249465">here</a> to access the private server all users must follow up with their ip-address to be whitelisted.</li>
+  <li><strong>Download</strong>: Visit the <a href="https://github.com/robwhitewick/tarkovMultiplayerFiles/releases/tag/latest">latest release</a>the Private server client.</li>
+  <li><strong>Join Community</strong>:404's Discord server <a href="https://discord.gg/8dAtjFe9Su">Discord community</a>.</li>
+  <li><strong>Whitelist</strong>:your account <a href="https://discord.com/channels/1193823641025138800/1195488587395895427/1195490014344249465">here</a> to access the private server all users must follow up with their ip-address to be whitelisted.</li>
 </ol>
 
 ## Server Information
