@@ -28,9 +28,9 @@
   <li><strong>Whitelist</strong>: your account <a href="https://discord.com/channels/1193823641025138800/1195488587395895427/1195490014344249465">here</a> to access the private server all users must follow up with their ip-address to be whitelisted.</li>
 </ol>
 
-## Server Information
+## Server Locations
 
-<p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">Tarkov24's Fanpage and be reached at<a href="https://ftzys.github.io/Tarkov24/"> Fanpage website</a>.</p>
+<p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">NewYork,Frankfurt,Singapore,Russia.</p>
 
 ## Disclaimer
 
