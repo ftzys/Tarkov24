@@ -4,11 +4,11 @@
 
 <h1 align="center"><b>Welcome</b></h1>
 
-<p align="center" style="font-family: 'Arial', sans-serif; font-size: 16px;">Tarkov24 is a fanpage for the 404studios tarkov private server</p>
+<p align="center" style="font-family: 'Arial', sans-serif; font-size: 16px;">Tarkov24 is a fanpage for the 404studios 24/7 Tarkov Multiplayer private server</p>
 
 ## Overview
 
-<p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">Tarkov24 offers a community-driven platform where players can engage in intense PVE firefights, connect with other players, and access server information.</p>
+<p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">Tarkov24 offers a fanpage for the 24/7 Tarkov Multiplayer community-driven discord where players can engage in intense PVE firefights, connect with other players, and access a full Tarkov live experience without cheaters.</p>
 
 ## Features
 
@@ -23,14 +23,14 @@
 <p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">To start playing on Tarkov24:</p>
 
 <ol align="center">
-  <li><strong>Download</strong>: Visit the <a href="https://github.com/robwhitewick/tarkovMultiplayerFiles/releases/tag/latest">latest release</a> to download the game files.</li>
-  <li><strong>Join Community</strong>: Connect with other players on our <a href="https://discord.gg/8dAtjFe9Su">Discord community</a>.</li>
-  <li><strong>Whitelist</strong>: Whitelist your account <a href="https://discord.com/channels/1193823641025138800/1195488587395895427/1195490014344249465">here</a> to access our servers.</li>
+  <li><strong>Download</strong>: Visit the <a href="https://github.com/robwhitewick/tarkovMultiplayerFiles/releases/tag/latest">latest release</a> to download the Private server client.</li>
+  <li><strong>Join Community</strong>: Join 404's Discord server <a href="https://discord.gg/8dAtjFe9Su">Discord community</a>.</li>
+  <li><strong>Whitelist</strong>: Whitelist your account <a href="https://discord.com/channels/1193823641025138800/1195488587395895427/1195490014344249465">here</a> to access the private server all users must follow up with their ip-address to be whitelisted.</li>
 </ol>
 
 ## Server Information
 
-<p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">Access our game servers by visiting our <a href="https://ftzys.github.io/Tarkov24/">servers website</a>.</p>
+<p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">Tarkov24's Fanpage and be reached at<a href="https://ftzys.github.io/Tarkov24/">Fanpage website</a>.</p>
 
 ## Disclaimer
 
