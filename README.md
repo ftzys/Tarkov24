@@ -32,9 +32,9 @@
 
 <p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">Access our game servers by visiting our <a href="https://ftzys.github.io/Tarkov24/">servers website</a>.</p>
 
-## Contributions
+## Disclaimer
 
-<p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">We welcome contributions to enhance Tarkov24. If you find any issues or have suggestions, feel free to open an issue or submit a pull request.</p>
+<p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;"This is a Fan page for the 404Studios Tarkov private server , Tarkov24 does not own or host and files</p>
 
 ## License
 
