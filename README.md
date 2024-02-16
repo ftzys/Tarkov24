@@ -9,7 +9,7 @@
 ## Website
 
 <p align="center"
-  <li><strong>Website</strong>: Visit the <a href="https://github.com/robwhitewick/tarkovMultiplayerFiles/releases/tag/latest">FanPage</a></li>
+  <li><a href="https://github.com/robwhitewick/tarkovMultiplayerFiles/releases/tag/latest">FanPage</a></li>
     </p>
 
 ## Overview
