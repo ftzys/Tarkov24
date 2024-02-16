@@ -1,10 +1,5 @@
 <p align="center">
   <img src="https://i.imgur.com/ZqEZNBD.png" alt="Tarkov24 Logo" width="200"/>
-</p>
-
-<h1 align="center"><b>Welcome</b></h1>
-
-<p align="center" style="font-family: 'Arial', sans-serif; font-size: 16px;">Tarkov24 is a fanpage for the 404studios 24/7 Tarkov Multiplayer private server</p>
 
 ## Website
 
