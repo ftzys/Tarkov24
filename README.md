@@ -4,7 +4,7 @@
 
 <h1 align="center"><b>Welcome</b></h1>
 
-<p align="center" style="font-family: 'Arial', sans-serif; font-size: 16px;">Tarkov24 is a multiplayer private server for Escape from Tarkov, providing an alternative gaming experience in the intense world of Tarkov.</p>
+<p align="center" style="font-family: 'Arial', sans-serif; font-size: 16px;">Tarkov24 is a fanpage for the 404studios tarkov private server</p>
 
 ## Overview
 
@@ -34,7 +34,8 @@
 
 ## Disclaimer
 
-<p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;"This is a Fan page for the 404Studios Tarkov private server , Tarkov24 does not own or host and files</p>
+<p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">This is a Fan page for the 404Studios Tarkov private server , Tarkov24 does not own or host any files associated with 404studios
+or battle state games intellectual property, im using this github for its github.pages only</p>
 
 ## License
 
