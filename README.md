@@ -1,8 +1,5 @@
 <p align="center">
   <img src="https://i.imgur.com/ZqEZNBD.png" alt="Tarkov24 Logo" width="200"/>
-
-## Website
-
 <p align="center"
   <li><a href="https://ftzys.github.io/Tarkov24/">FanPage</a></li>
     </p>
