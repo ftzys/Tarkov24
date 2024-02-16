@@ -20,9 +20,9 @@
 
 <p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">To start playing on Tarkov24</p>
 <p align="center">
-  <li><strong>Download</strong>: Visit the <a href="https://github.com/robwhitewick/tarkovMultiplayerFiles/releases/tag/latest"> latest release</a> the Private server client.</li> <a href="https://discord.com/channels/1193823641025138800/1194743533358284963"> Tutorial<a/>
-  <li><strong>Join Community</strong>: 404's Discord server <a href="https://discord.gg/8dAtjFe9Su">Discord community</a>.</li>
-  <li><strong>Whitelist</strong>: your account <a href="https://discord.com/channels/1193823641025138800/1195488587395895427/1195490014344249465">here</a> to access the private server all users must follow up with their ip-address to be whitelisted.</li>
+  <p><strong>Download</strong>: Visit the <a href="https://github.com/robwhitewick/tarkovMultiplayerFiles/releases/tag/latest"> latest release</a> the Private server client.</p> <a href="https://discord.com/channels/1193823641025138800/1194743533358284963"> Tutorial<a/>
+  <p><strong>Join Community</strong>: 404's Discord server <a href="https://discord.gg/8dAtjFe9Su">Discord community</a>.</p>
+  <p><strong>Whitelist</strong>: your account <a href="https://discord.com/channels/1193823641025138800/1195488587395895427/1195490014344249465">here</a> to access the private server all users must follow up with their ip-address to be whitelisted.</p>
 </p>
 
 ## Server Locations
