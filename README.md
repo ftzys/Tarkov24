@@ -13,7 +13,7 @@
 <ul align="center">
   <li><strong>Intense PVE Firefights</strong>: Experience thrilling battles against AI-controlled PMC and Scavs.</li>
   <li><strong>Vibrant Community</strong>: Connect with thousands of players, share tips, and participate in community events.</li>
-  <li><strong>Servers</strong>: 3 seperate servers in 3 different regions NA , EU , AS</li>
+  <li><strong>Servers</strong>: 4 seperate servers in 3 different regions NA , EU , AS</li>
 </ul>
 
 ## Getting Started
