@@ -9,7 +9,7 @@
 ## Website
 
 <p align="center"
-  <li><a href="https://github.com/robwhitewick/tarkovMultiplayerFiles/releases/tag/latest">FanPage</a></li>
+  <li><a href="https://ftzys.github.io/Tarkov24/">FanPage</a></li>
     </p>
 
 ## Overview
