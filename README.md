@@ -7,7 +7,7 @@
 <p align="center" style="font-family: 'Arial', sans-serif; font-size: 16px;">Tarkov24 is a fanpage for the 404studios 24/7 Tarkov Multiplayer private server</p>
 ## Website
 <ol align="center">
-  <li><strong>Fanpage</strong>: Visit the Fanpage<a href="https://ftzys.github.io/Tarkov24/"></li>
+  <li><strong>Website</strong>: Visit the <a href="https://github.com/robwhitewick/tarkovMultiplayerFiles/releases/tag/latest">FanPage</a></li>
     </ol>
 
 ## Overview
