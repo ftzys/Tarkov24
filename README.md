@@ -30,7 +30,7 @@
 
 ## Server Locations
 
-<p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">NewYork,Frankfurt,Singapore,Russia.</p>
+<p align="center" style="font-family: 'Arial', sans-serif; font-size: 14px;">NewYork   ,   Frankfurt   ,   Singapore   ,   Russia.</p>
 
 ## Disclaimer
 
